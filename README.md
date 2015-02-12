@@ -1,2 +1,2 @@
-# mazeRunner
-Maze Navigator Files
+# Maze Runner
+Maze File Navigator
