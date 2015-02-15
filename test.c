@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <curses.h>
 #include "Vector2.h"
+#include "Player.h"
 
 int main()
 {
