@@ -8,5 +8,6 @@ typedef struct Vector2
 } Vector2;
 
 void printV2(Vector2);
+Vector2 addV2(Vector2, Vector2);
 
 #endif
