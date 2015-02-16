@@ -13,7 +13,7 @@ Player CreateActor(Vector2 start, WINDOW* parent)
 
 void ChangePos(Player* actor, Vector2 move)
 {
-    actor->pos = addV2(actor->pos, move);
+    actor->pos = AddV2(actor->pos, move);
 }
 
 void Update(Player* actor)

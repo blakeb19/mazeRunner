@@ -16,6 +16,6 @@ Vector2 AddV2(Vector2 a, Vector2 b)
 
 void ZeroOut(Vector2* in)
 {
-    in.x = 0;
-    in.y = 0;
+    in->x = 0;
+    in->y = 0;
 }
