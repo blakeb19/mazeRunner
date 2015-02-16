@@ -11,12 +11,12 @@ Player CreateActor(Vector2 start, WINDOW* parent)
     return actor;
 }
 
-void changePos(Player* actor, Vector2 move)
+void ChangePos(Player* actor, Vector2 move)
 {
     actor->pos = addV2(actor->pos, move);
 }
 
-void update(Player* actor)
+void Update(Player* actor)
 {
     mvwaddch(actor->win, actor->pos.y, actor->pos.x, 'X');
 }

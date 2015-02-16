@@ -11,7 +11,7 @@ typedef struct Player
 } Player;
 
 Player CreateActor(Vector2, WINDOW*);
-void changePos(Player*, Vector2);
-void update(Player*);
+void ChangePos(Player*, Vector2);
+void Update(Player*);
 
 #endif
