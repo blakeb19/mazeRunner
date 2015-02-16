@@ -18,5 +18,5 @@ void changePos(Player* actor, Vector2 move)
 
 void update(Player* actor)
 {
-
+    mvwaddch(actor->win, actor->pos.y, actor->pos.x, 'X');
 }
