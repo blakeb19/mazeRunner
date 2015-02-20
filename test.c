@@ -2,6 +2,7 @@
 #include <curses.h>
 #include "Vector2.h"
 #include "Player.h"
+#include "Maze.h"
 
 int main()
 {
@@ -21,17 +22,24 @@ int main()
 
     wrefresh(stdscr);
 
-    Vector2 start = {5, 5};
+    Maze current = MakeMaze("maze.txt", win);
+
+    Vector2 start = current.start;
 
     Player actor = CreateActor(start, win);
 
     int ch = ' ';
     Vector2 move = {0, 0};
 
+    PrintMaze(current);
+
     while(1)
     {
-	Update(&actor, move);
+	Update(&actor, move, current);
 	ZeroOut(&move);
+
+	mvwprintw(win, 4, 40, "Player x: %d", actor.pos.x);
+	mvwprintw(win, 5, 40, "Player y: %d", actor.pos.y);
 
         ch = wgetch(win);
 

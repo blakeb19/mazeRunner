@@ -2,10 +2,18 @@
 #define MAZE_H
 
 #include <stdio.h>
+#include <curses.h>
+#include "Vector2.h"
 
 typedef struct Maze
 {
-    char[10][10] layout;
+    char layout[21][31];
+    WINDOW* win;
+    Vector2 start;
+    Vector2 goal;
 } Maze;
 
-Upload(Maze*);
+Maze MakeMaze(char[], WINDOW*);
+void PrintMaze(Maze);
+
+#endif

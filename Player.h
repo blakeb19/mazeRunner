@@ -3,6 +3,7 @@
 
 #include <curses.h>
 #include "Vector2.h"
+#include "Maze.h"
 
 typedef struct Player
 {
@@ -12,6 +13,6 @@ typedef struct Player
 
 Player CreateActor(Vector2, WINDOW*);
 void ChangePos(Player*, Vector2);
-void Update(Player*, Vector2);
+void Update(Player*, Vector2, Maze);
 
 #endif
