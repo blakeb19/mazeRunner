@@ -14,6 +14,15 @@ Vector2 AddV2(Vector2 a, Vector2 b)
     return sum;
 }
 
+int EquivV2(Vector2 a, Vector2 b)
+{
+    if (a.x == b.x && a.y == b.y)
+    { return 1; }
+
+    else
+    { return 0; }
+}
+
 void ZeroOut(Vector2* in)
 {
     in->x = 0;

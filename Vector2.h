@@ -9,6 +9,7 @@ typedef struct Vector2
 
 void PrintV2(Vector2);
 Vector2 AddV2(Vector2, Vector2);
+int EquivV2(Vector2, Vector2);
 void ZeroOut(Vector2*);
 
 #endif
