@@ -30,7 +30,6 @@ int main()
 
     int ch = ' ';
     Vector2 move = {0, 0};
-
     PrintMaze(current);
 
     while(1)
@@ -38,23 +37,25 @@ int main()
 	Update(&actor, move, current);
 	ZeroOut(&move);
 
-	mvwprintw(win, 4, 40, "Player x: %d", actor.pos.x);
-	mvwprintw(win, 5, 40, "Player y: %d", actor.pos.y);
-
         ch = wgetch(win);
 
 	if (ch == KEY_DOWN)
-	{ move.y++;}
+	{ move.y++; }
 	if (ch == KEY_UP)
-	{ move.y--;}
+	{ move.y--; }
         if (ch == KEY_LEFT)
-	{ move.x--;}
+	{ move.x--; }
         if (ch == KEY_RIGHT)
-	{ move.x++;}
+	{ move.x++; }
 	if (ch == ' ')
 	{ werase(win);}
 	if (ch == 'q')
 	{ break;}
+
+	if (EquivV2(AddV2(actor.pos, move), current.goal))
+	{
+	    mvwprintw(win, 5, 40, "You Win!");
+	}
 
         wrefresh(win);
     }
