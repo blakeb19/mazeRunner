@@ -30,7 +30,7 @@ void Update(Player* actor, Vector2 move, Maze m)
     if (actor->pos.y + move.y < 0 || actor->pos.y + move.y > getmaxy(actor->win) - 1)
     { move.y = 0; }
 
-    else if (m.layout[actor->pos.y + move.y][actor->pos.x])
+    else if (m.layout[actor->pos.y + move.y][actor->pos.x] != ' ')
     { move.y = 0; }
 
     ChangePos(actor, move);
